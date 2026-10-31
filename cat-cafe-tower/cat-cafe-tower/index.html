@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cat Café Tower</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c" aria-label="Cat Café Tower game"></canvas>
+  <button id="mode" type="button" aria-label="Switch light or dark mode">🌙</button>
+
+  <div id="pads" aria-hidden="true">
+    <button class="pad" id="bl" tabindex="-1">◀</button>
+    <button class="pad j" id="bj" tabindex="-1">Jump</button>
+    <button class="pad" id="br" tabindex="-1">▶</button>
+  </div>
+
+  <div id="menu" class="ov on">
+    <h1>🎃 Cat Café Tower 🎄</h1>
+    <p>Hop up the café shelves, past pumpkins and Christmas trees. Run faster to jump higher. Reach floor 40 to find the treasure.</p>
+    <div class="cats" id="picker" role="group" aria-label="Choose your cat"></div>
+    <button class="btn" id="play">Start climbing</button>
+    <p style="font-size:13px">Arrow keys or A/D to move, Space to jump. On touch, use the pads.</p>
+  </div>
+
+  <div id="over" class="ov">
+    <h2>Splat!</h2>
+    <p id="overTxt"></p>
+    <div class="row">
+      <button class="btn" id="again">Try again</button>
+      <button class="btn alt" id="swap">Change cat</button>
+    </div>
+  </div>
+
+  <div id="win" class="ov">
+    <div class="big">🎁</div>
+    <h2>You found the treasure!</h2>
+    <p>Your reward is a seat at the table. Come hang out with the community.</p>
+    <a class="btn dc" id="dcLink" href="https://dc.gg/commonground" target="_blank" rel="noopener noreferrer">Join our Discord server</a>
+    <div class="row">
+      <button class="btn alt" id="again2">Climb again</button>
+      <button class="btn alt" id="swap2">Change cat</button>
+    </div>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
