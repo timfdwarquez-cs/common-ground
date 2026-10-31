@@ -23,9 +23,11 @@ p{margin:0;line-height:1.4;color:var(--mute);max-width:30ch}
 .pad{pointer-events:auto;width:72px;height:72px;border-radius:50%;border:0;background:var(--padbg);color:var(--ink);font-size:28px;touch-action:none}
 .pad.j{background:rgba(255,207,74,.35);width:84px;height:84px;font-size:16px;font-weight:700}
 .big{font-size:56px;line-height:1}
-#mode{position:absolute;top:8px;right:8px;width:38px;height:38px;border-radius:50%;border:0;background:var(--panel);color:var(--ink);font-size:18px;cursor:pointer;z-index:5}
+#actions{position:absolute;top:calc(8px + env(safe-area-inset-top,0px));right:calc(8px + env(safe-area-inset-right,0px));display:flex;gap:8px;z-index:5}
+#mode,#music{flex:0 0 42px;width:42px;height:42px;padding:0;border-radius:50%;border:0;background:var(--panel);color:var(--ink);cursor:pointer;display:grid;place-items:center;line-height:1}
+#mode{font-size:18px}
 #mode:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-#music{position:absolute;top:8px;right:52px;width:38px;height:38px;border-radius:50%;border:0;background:var(--panel);color:var(--ink);font-size:20px;cursor:pointer;z-index:5}
+#music{font-size:20px}
 #music:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 #bgMusic{position:absolute;width:1px;height:1px;left:-10px;bottom:-10px;border:0;opacity:0;pointer-events:none}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}

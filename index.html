@@ -9,9 +9,11 @@
 <body>
 <div id="wrap">
   <canvas id="c" aria-label="Common Ground game"></canvas>
-  <button id="mode" type="button" aria-label="Switch light or dark mode">🌙</button>
-  <button id="music" type="button" aria-label="Play background music">♫</button>
-  <audio id="bgMusic" preload="metadata" loop>
+  <div id="actions">
+    <button id="music" type="button" aria-label="Play background music">♫</button>
+    <button id="mode" type="button" aria-label="Switch light or dark mode">🌙</button>
+  </div>
+  <audio id="bgMusic" preload="metadata" playsinline loop>
     <source src="song/ALMOND%20JOY.mp3" type="audio/mpeg">
   </audio>
 
